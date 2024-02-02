@@ -24,17 +24,22 @@ namespace WebGame1.Pages
         {
             InitializeComponent();
         }
-
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Привет");
-            NavigationService.Navigate(new UnitInformation());
+            MessageBox.Show("ВЫ ВЫБРАЛИ ВОИНА");
+            NavigationService.Navigate(new WariorPage());
+        }
+
+        private void Image_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("ВЫ ВЫБРАЛИ РАЗБОЙНИКА");
+            NavigationService.Navigate(new RoguePage());
+        }
+
+        private void Image_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("ВЫ ВЫБРАЛИ МАГА");
+            NavigationService.Navigate(new WizzardPage());
         }
     }
 }

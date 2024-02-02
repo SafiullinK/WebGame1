@@ -74,6 +74,9 @@
     <Compile Include="Pages\SelectUnitPage.xaml.cs">
       <DependentUpon>SelectUnitPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\UnitInformation.xaml.cs">
+      <DependentUpon>UnitInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Units\IArmor.cs" />
     <Compile Include="Units\IBattleUnit.cs" />
     <Compile Include="Units\IHealth.cs" />
@@ -94,6 +97,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\SelectUnitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UnitInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,13 +133,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\rogue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\warrior2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Remove-bg.ai_1706855784408.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Remove-bg.ai_1706859248828.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mag %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\41524.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

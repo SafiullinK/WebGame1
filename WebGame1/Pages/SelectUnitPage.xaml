@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SelectUnitPage">
 
-    <Grid Background="LightSlateGray">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/41524.jpg" Stretch="UniformToFill" TileMode="None"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -17,7 +20,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/> 
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -29,9 +32,13 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Source="/Resources/rogue.png" Grid.Column="3" Margin="8 31" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5"/>
-        <Image Source="/Resources/Remove-bg.ai_1706855784408.png" Grid.Column="1" Margin="8" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5"/>
-
-
+        
+        <Image Source="/Resources/Remove-bg.ai_1706855784408.png" Grid.Column="1" Margin="6" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="5" InputScope="Default" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+        <Image Source="/Resources/Remove-bg.ai_1706859248828.png" Grid.Column="3" Margin="20" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="5"/>
+        <Image Source="/Resources/mag (2).png" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="5" Margin="40"/>
+        <TextBlock FontSize="16" FontStyle="Italic" FontWeight="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="top" HorizontalAlignment="Center" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"> Warrior</TextBlock>
+        <TextBlock FontSize="16" FontStyle="Italic" FontWeight="Bold" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="top" HorizontalAlignment="Center"> Rogue</TextBlock>
+        <TextBlock FontSize="16" FontStyle="Italic" FontWeight="Bold" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="top" HorizontalAlignment="Center"> Wizard</TextBlock>
+        
     </Grid>
 </Page> 

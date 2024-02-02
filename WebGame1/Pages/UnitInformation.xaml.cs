@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace WebGame1.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SelectUnitPage.xaml
+    /// Логика взаимодействия для UnitInformation.xaml
     /// </summary>
-    public partial class SelectUnitPage : Page
+    public partial class UnitInformation : Page
     {
-        public SelectUnitPage()
+        public UnitInformation()
         {
             InitializeComponent();
-        }
-
-
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Привет");
-            NavigationService.Navigate(new UnitInformation());
         }
     }
 }

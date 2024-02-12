@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebGame1.MongoDB;
+using WebGame1.Units;
 
 namespace WebGame1.Pages
 {
@@ -20,9 +22,18 @@ namespace WebGame1.Pages
     /// </summary>
     public partial class RoguePage : Page
     {
+        public static MongoDB.Rogue currentRogue;
         public RoguePage()
         {
             InitializeComponent();
+            RogueLv.ItemsSource = MongoDB.Rogue.GetAllRogue();
+            DataContext = this;
+        }
+
+        private void RogueLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            currentRogue = RogueLv.SelectedItem as MongoDB.Rogue;
+            NavigationService.Navigate(new ListOfHeroRogue());
         }
     }
 }

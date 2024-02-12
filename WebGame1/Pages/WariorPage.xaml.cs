@@ -21,15 +21,19 @@ namespace WebGame1.Pages
     /// </summary>
     public partial class WariorPage : Page
     {
+        public static MongoDB.Warrior currentWarrior;
         public WariorPage()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            WarriorLv.ItemsSource = MongoDB.Warrior.GetWarriors();
+            DataContext = this;
         }
 
-        private void getus_Click(object sender, RoutedEventArgs e)
+        private void RogueLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CRUD.GetUser(Convert.ToInt32(userid.Text));
+            currentWarrior = WarriorLv.SelectedItem as MongoDB.Warrior;
+            NavigationService.Navigate(new ListOfHeroWarrior());
         }
     }
 }

@@ -1,0 +1,449 @@
+﻿<Page x:Class="WebGame1.Pages.ListOfHeroRogue"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WebGame1.Pages"
+      mc:Ignorable="d" 
+      Height="1080" Width="1920"
+      
+      Title="ListOfMyHero">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.RowSpan="4"
+                   Grid.ColumnSpan="8">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/Resources/back.jpg" Stretch="Fill"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+
+        <TextBlock Background="#7F242E83"
+                   Grid.RowSpan="4"
+                   Grid.ColumnSpan="8"></TextBlock>
+
+        <TextBlock Background="#7F010419"
+           Grid.RowSpan="3"
+           Grid.Row="0"
+           Grid.ColumnSpan="8"></TextBlock>
+
+
+        <ListView   FontSize="22"
+                    Width="1920"
+                    Height="270"
+                    Grid.Row="0"
+                    Name="ListSettings"
+                    VerticalAlignment="Top"
+                    Grid.ColumnSpan="8"
+                    FontWeight="Bold">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                    health
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding _health}" Foreground="Black" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                        mana
+                                </TextBlock>
+                            </StackPanel>
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding _mana}" Foreground="Black"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                       damage
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _pdamade}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                       armor
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _armor}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                        magic damage
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _mdamage}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                        magic defense
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _mdefence}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                        crit chance
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _crtchance}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="240">
+                            <StackPanel>
+                                
+                                <TextBlock HorizontalAlignment="Center">
+                                        crit damage
+                                </TextBlock>
+                            </StackPanel>
+
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="Background" Value="Purple" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Height" Value="130"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding _crtdamage}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--Strenght-->
+        <TextBlock Foreground="White"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   FontSize="32"
+                   FontWeight="Bold">Strenght</TextBlock>
+
+        
+
+        <TextBlock Foreground="White"
+           Grid.Row="1"
+           Grid.Column="1"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="32" 
+           FontWeight="Bold"
+           Name="CountPowerTb"
+           />
+
+        <Button
+          HorizontalAlignment="Left"
+          Grid.Row="1"
+          Grid.Column="2"
+          IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+          
+          Background="Purple" 
+BorderBrush="Black"
+          FontSize="22" 
+          Width="50"
+          Height="50"
+          FontWeight="Bold"
+          Name="AddPowerBt" Click="AddPowerBt_Click">
+            +
+        </Button>
+
+        <!--Dexterity-->
+        <TextBlock Foreground="White"
+           Grid.Row="1"
+           Grid.Column="7"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Left"
+           FontSize="32"
+           FontWeight="Bold">Dexterity</TextBlock>
+
+       
+        <TextBlock Foreground="White"
+           Grid.Row="1"
+           Grid.Column="6"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="32"
+           FontWeight="Bold"
+           Name="CountDexterityTb"/>
+
+        <Button
+          HorizontalAlignment="Right"
+          Grid.Row="1"
+          Grid.Column="5"
+          IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+          Background="Purple" 
+          BorderBrush="Black"
+          FontSize="22"
+          Width="50"
+          Height="50"
+          FontWeight="Bold"
+          Name="AddDexterityBt" Click="AddDexterityBt_Click">
+            +
+        </Button>
+
+        <!--Inteligence-->
+        <TextBlock Foreground="White"
+           Grid.Row="2"
+           Grid.Column="7"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Left"
+           FontSize="32"
+           FontWeight="Bold">Inteligence</TextBlock>
+
+
+        <TextBlock Foreground="White"
+           Grid.Row="2"
+           Grid.Column="6"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="32"
+           FontWeight="Bold"
+           Name="CountInteligienceTb"/>
+
+        <Button
+          HorizontalAlignment="Right"
+          Grid.Row="2"
+          Grid.Column="5"
+          IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+          Background="Purple" 
+          BorderBrush="Black"
+          FontSize="22"
+          Width="50"
+          Height="50"
+          FontWeight="Bold"
+          Name="AddInteligienceBt" Click="AddInteligienceBt_Click">
+            +
+        </Button>
+
+        <!--Vitality-->
+        <TextBlock Foreground="White"
+           Grid.Row="2"
+           Grid.Column="0"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Right"
+           FontSize="32"
+           FontWeight="Bold">Vitality</TextBlock>
+
+       
+
+        <TextBlock Foreground="White"
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="32"
+            FontWeight="Bold"
+            Name="CountVitalityTb"/>
+
+        <Button
+            HorizontalAlignment="Right"
+            Grid.Row="2"
+            Grid.Column="2"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            Background="Purple" 
+BorderBrush="Black"
+            FontSize="22" 
+            Width="50"
+            Height="50"
+            FontWeight="Bold"
+            Name="AddVitalityBt" Margin="0,110,190,110" Click="AddVitalityBt_Click">
+            +
+        </Button>
+
+        <!--Points-->
+        <StackPanel Grid.RowSpan="2" 
+            Width="300"
+            Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <TextBlock Foreground="White"
+               FontSize="40"
+               TextAlignment="Center"
+               FontWeight="Bold">Count of points
+            </TextBlock>
+
+            <TextBlock Foreground="White"
+                       FontSize="60"
+                       TextAlignment="Center"
+                       FontWeight="Bold"
+                       Name="CountPointsTb">
+            </TextBlock>
+        </StackPanel>
+
+        <!--lvl-->
+        <StackPanel Grid.Column="3"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Orientation="Vertical">
+            <TextBlock Foreground="White"
+                       FontSize="60"
+                       TextAlignment="Center"
+                       FontWeight="Bold">Your level:</TextBlock>
+            <TextBlock Foreground="White"
+                       FontSize="60"
+                       TextAlignment="Center"
+                       FontWeight="Bold"
+                       Name="myLevelTb"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    VerticalAlignment="Bottom">
+            <Button Background="Purple" 
+            BorderBrush="Black"
+                    Name="AddPointsBt" Click="AddPointsBt_Click">+1000</Button>
+        </StackPanel>
+        <Button Grid.Row="3"
+                Width="100"
+                Height="50"
+                Background="Purple"
+                Name="SaveBt"
+                FontSize="30" Click="SaveBt_Click">Save</Button>
+
+        
+
+    </Grid>
+</Page>

@@ -121,9 +121,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MongoDB\CRUD.cs" />
-    <Compile Include="MongoDB\Team.cs" />
-    <Compile Include="MongoDB\User.cs" />
+    <Compile Include="MongoDB\Rogue.cs" />
+    <Compile Include="MongoDB\Warrior.cs" />
+    <Compile Include="MongoDB\Wizard.cs" />
+    <Compile Include="Pages\ListOfHeroRogue.xaml.cs">
+      <DependentUpon>ListOfHeroRogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfHeroWarrior.xaml.cs">
+      <DependentUpon>ListOfHeroWarrior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfHeroWizzard.xaml.cs">
+      <DependentUpon>ListOfHeroWizzard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RoguePage.xaml.cs">
       <DependentUpon>RoguePage.xaml</DependentUpon>
     </Compile>
@@ -155,6 +164,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ListOfHeroRogue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListOfHeroWarrior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListOfHeroWizzard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RoguePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -218,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <Resource Include="Resources\back.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets')" />

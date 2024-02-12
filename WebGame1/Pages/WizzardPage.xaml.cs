@@ -20,9 +20,19 @@ namespace WebGame1.Pages
     /// </summary>
     public partial class WizzardPage : Page
     {
+        public static MongoDB.Wizard currentWizard;
         public WizzardPage()
         {
+
             InitializeComponent();
+            WizzardLv.ItemsSource = MongoDB.Wizard.GetWizards();
+            DataContext = this;
+        }
+
+        private void RogueLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            currentWizard = WizzardLv.SelectedItem as MongoDB.Wizard;
+            NavigationService.Navigate(new ListOfHeroWizzard());
         }
     }
 }
